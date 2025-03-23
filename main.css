@@ -133,3 +133,6 @@ td:nth-child(2) a {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
+td a {
+	text-align: center;
+}
