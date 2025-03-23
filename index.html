@@ -1,10 +1,206 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>HTML5</title>
-	</head>
-	<body>
-		<h1>Hello World!</h1>
-	</body>
+<html lang="tr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<title>Log Kayıtları</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #3C3D4F;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		html, body {
+			-webkit-tap-highlight-color: transparent;
+			user-select: none;
+			touch-action: none;
+			-webkit-touch-action: none;
+		}
+
+		.container {
+			position: fixed;
+			background-color: white;
+			padding: 5px 5px;
+			border-radius: 8px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+			width: 80%;
+			max-width: 800px;
+			text-align: center;
+		}
+
+		#c2 {
+			width: 100%;
+			height: 60px;
+			background-image: url('c2.svg'),
+			url('lab.svg');
+			background-repeat: no-repeat,
+			no-repeat;
+			background-size: 60px,
+			100%;
+			border-radius: 8px;
+		}
+
+		#log::before {
+			content: 'Log kayıtları';
+			color: #5c5ca7;
+		}
+
+		#log {
+			margin-bottom: 20px;
+			color: #333;
+		}
+		#list {
+			height: 50vh;
+			overflow-y: scroll;
+			position: relative;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 10px;
+		}
+
+		th, td {
+			border: 1px solid #ddd;
+			padding: 10px;
+			text-align: center;
+			min-width: 150px;
+		}
+
+		th {
+			background-color: #5c5ca7;
+			color: white;
+			position: sticky;
+			top: 0;
+			z-index: 2;
+		}
+
+		th#tarih,
+		td:nth-child(1) {
+			position: sticky;
+			left: 0;
+			background-color: #fff;
+			z-index: 1;
+		}
+
+		th#baglantilar,
+		td:nth-child(2) {
+			position: sticky;
+			left: 150px;
+			background-color: #fff;
+			z-index: 1;
+		}
+
+		th#tarih,
+		th#baglantilar {
+			background-color: #5c5ca7;
+			z-index: 3;
+		}
+
+		tr:hover {
+			background-color: #ddd;
+			transition: 0.3s;
+		}
+
+		tr:hover td:nth-child(1),
+		tr:hover td:nth-child(2) {
+			background-color: #ddd;
+		}
+
+		#tarih::before {
+			content: 'Tarih';
+		}
+		#saat::before {
+			content: 'Saat';
+		}
+		#baglantilar::before {
+			content: 'Bağlantılar';
+		}
+		a {
+			color: #5c5ca7;
+			transition: 800ms all ease;
+
+		}
+		a:hover {
+			opacity: 0.4;
+			transition: 300ms all ease;
+		}
+		td:nth-child(2) a {
+			display: block;
+			max-width: 150px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	</style>
+</head>
+<body oncontextmenu="return false;">
+
+	<div class="container">
+		<div id="c2"></div>
+		<h2 id="log"></h2>
+		<div id="list">
+			<table>
+				<thead>
+					<tr>
+						<th id="tarih"></th>
+						<th id="baglantilar"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>14.03.2025</td>
+						<td><a href="https://connected2me-log.github.io/s-6c9dd98516e6ac1cb0c4f6245343fb5160d6d11afb7fbf011b0ba4012dece6d0/">http://dc1hf5hqe7d0f.cdn-s3.c2me.cc/s-6c9dd98516e6ac1cb0c4f6245343fb5160d6d11afb7fbf011b0ba4012dece6d0.mp4</a></td>
+					</tr>
+					<!--
+					<tr>
+						<td>14.03.2025</td>
+						<td>Dosya yükledi</td>
+					</tr>
+					<tr>
+						<td>14.03.2025</td>
+						<td>Kullanıcı sildi</td>
+					</tr>
+					<tr>
+						<td>15.03.2025</td>
+						<td>Kullanıcı</td>
+					</tr>
+					<tr>
+						<td>15.03.2025</td>
+						<td>Kullanıcı</td>
+					</tr>
+					<tr>
+						<td>15.03.2025</td>
+						<td>Kullanıcı</td>
+					</tr>
+					<tr>
+						<td>15.03.2025</td>
+						<td>Kullanıcı</td>
+					</tr>
+					<tr>
+						<td>15.03.2025</td>
+						<td>Kullanıcı</td>
+					</tr>
+					<tr>
+						<td>15.03.2025</td>
+						<td>Kullanıcı</td>
+					</tr>
+					<tr>
+						<td>15.03.2025</td>
+						<td>Kullanıcı</td>
+					</tr>
+					-->
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
 </html>
