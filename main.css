@@ -127,7 +127,7 @@ a:hover {
 	transition: 300ms all ease;
 }
 td:nth-child(2) a {
-	display: block;
+	display: inline-block;
 	max-width: 150px;
 	overflow: hidden;
 	white-space: nowrap;
